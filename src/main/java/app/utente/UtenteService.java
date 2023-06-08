@@ -19,9 +19,9 @@ public class UtenteService {
 	private UtenteRepository utenteRepo;
 
 	// Versione 1
-//	public Utente create(Utente u) {
-//		return utenteRepo.save(u);
-//	}
+	public Utente create(Utente u) {
+		return utenteRepo.save(u);
+	}
 
 	// Versione 2 con controllo
 //	public Utente create2(Utente u) {
@@ -38,7 +38,7 @@ public class UtenteService {
 			throw new BadRequestException(
 					"ATTENZIONE!!! L'email con la quale stai cercando di registarti è già in uso da un altro utente");
 		});
-		Utente newUtente = new Utente(u.getNome(), u.getCognome(), u.getEmail());
+		Utente newUtente = new Utente(u.getNome(), u.getCognome(), u.getEmail(), u.getPassword());
 		return utenteRepo.save(newUtente);
 	}
 

@@ -28,14 +28,16 @@ public class Utente {
 	private String nome;
 	private String cognome;
 	private String email;
+	private String password;
 
 //	@OneToMany(mappedBy = "utente")
 //	private Set<Prenotazione> prenotazioni;
 
-	public Utente(String nome, String cognome, String email) {
+	public Utente(String nome, String cognome, String email, String password) {
 		this.nome = nome;
 		this.cognome = cognome;
 		this.email = email;
+		this.password = password;
 	}
 
 }

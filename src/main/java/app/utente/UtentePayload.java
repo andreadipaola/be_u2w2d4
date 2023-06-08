@@ -14,4 +14,5 @@ public class UtentePayload {
 	String cognome;
 	@Email(message = "Non hai inserito un indirizzo email valido")
 	String email;
+	String password;
 }

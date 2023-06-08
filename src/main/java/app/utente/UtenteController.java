@@ -32,7 +32,7 @@ public class UtenteController {
 	// Versione 2 con paginazione
 	@GetMapping("")
 	public Page<Utente> getUsers2(@RequestParam(defaultValue = "0") int page,
-			@RequestParam(defaultValue = "10") int size, @RequestParam(defaultValue = "id") String sortBy) {
+			@RequestParam(defaultValue = "10") int size, @RequestParam(defaultValue = "utenteId") String sortBy) {
 		return utenteService.find2(page, size, sortBy);
 	}
 
